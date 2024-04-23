@@ -107,7 +107,7 @@
         var domi = params.has('domi') ? params.get('domi') : "N/A";
         var propina = params.has('propina') ? params.get('propina') : "N/A";
 
-        var total = params.has('total') ? params.get('total') : "";
+        var totalf = params.has('total') ? params.get('total') : "";
         var subtotal_desc = params.has('subtotal_desc') ? params.get('subtotal_desc') : " ";
         var descuento = params.has('descuento') ? params.get('descuento') : " ";
         var estado = params.has('estado') ? params.get('estado') : "--";
@@ -120,7 +120,7 @@
         //Formato de 2 decimales
         propina = parseFloat(propina).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         domi = parseFloat(domi).toLocaleString('es-ES', { minimumFractionDigits: 0 });
-        total = parseFloat(total).toLocaleString('es-ES', { minimumFractionDigits: 0 });
+        totalf = parseFloat(total).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         descuento = parseFloat(descuento).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         subtotal_desc = parseFloat(subtotal_desc).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         
@@ -653,8 +653,8 @@
                     
                 </tr>
                 <tr class="table-footer top-line">
-                    <td class=""  colspan="2"><h2>TOTAL:</h2></td>
-                    <td colspan="2"><h2 id="total"></h2></td>
+                    <td colspan="2"><h2>TOTAL:</h2></td>
+                    <td colspan="2"><h2 id="totalf"></h2></td>
                 </tr>
                 <tr class="table-footer">
                     <td colspan="2"><h2>DEVUELTAS:</h2></td>
@@ -711,7 +711,7 @@
              // Si domi no es "N/A", muestra el valor en el elemento <h2>
              domiElement.textContent = domi;
             }       
-        var totalElement = document.getElementById("total").textContent = total;
+        var totalElement = document.getElementById("totalf").textContent = totalf;
         var subtotal_descElement = document.getElementById("efectivo").textContent = descuento;
         var descuentoElement = document.getElementById("devueltas").textContent = subtotal_desc;
         var estadoElement = document.getElementById("estado").textContent = estado;
