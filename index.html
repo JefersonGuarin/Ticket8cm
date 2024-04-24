@@ -625,11 +625,11 @@
                     var newRow = document.createElement("tr");
                     newRow.className = "table-item";
 
-                    newRow.innerHTML = `
+                    newRow.innerHTML = '
                         <td class="item">${row.cantidad}</td>
                         <td class="item">${row.descripcion}</td>
                         <td class="item">${row.precio_unit}</td>
-                    `;
+                    ';
                     tablaBody.appendChild(newRow);
                     });
                     // Agrega una fila adicional con un espacio
