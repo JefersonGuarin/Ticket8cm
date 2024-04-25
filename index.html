@@ -97,6 +97,8 @@
         const params = new URLSearchParams(window.location.search);
 
         // Obtener los valores de los parámetros
+        var nombre_empresa = params.has('nombre_empresa') ? params.get('nombre_empresa') : "---";
+        
         var nro_boleta = params.has('boleta') ? params.get('boleta') : "---";
         var logo = params.has('logo') ? params.get('logo') : "---";
         var nro_mesa = params.has('mesa') ? params.get('mesa') : "---";
@@ -109,6 +111,8 @@
         var propina = params.has('propina') ? params.get('propina') : "N/A";
 
         var total = params.has('total') ? params.get('total') : "";
+        var saldo = params.has('saldo') ? params.get('saldo') : "";
+        var a_cuenta = params.has('a_cuenta') ? params.get('a_cuenta') : "---";
         var subtotal_desc = params.has('subtotal_desc') ? params.get('subtotal_desc') : " ";
         var descuento = params.has('descuento') ? params.get('descuento') : " ";
         var estado = params.has('estado') ? params.get('estado') : "--";
@@ -122,6 +126,8 @@
         propina = parseFloat(propina).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         domi = parseFloat(domi).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         total = parseFloat(total).toLocaleString('es-ES', { minimumFractionDigits: 0 });
+        a_cuenta = parseFloat(a_cuenta).toLocaleString('es-ES', { minimumFractionDigits: 0 });
+        saldo = parseFloat(saldo).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         descuento = parseFloat(descuento).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         subtotal_desc = parseFloat(subtotal_desc).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         
@@ -157,14 +163,14 @@
         </div>
         
         <div class="label">
-            <b>TICKET:</b>
+            <b>NOTA DE VENTA:</b>
             <h1 class="nro_boleta" id="nro_boleta_id" ></h1>
             <h1 class="nro_mesa" id="nro_mesa_id" ></h1>
             <h3 class="direccion" id="nro_direccion_id" ></h3>
         </div>
         <div class="label">
             <p class="fecha_recepcion">
-                FECHA DE RECEPCION:
+                FECHA:
                 <br>
                 <b id="fechaR"></b>
             </p>
@@ -187,7 +193,7 @@
                 <tr class="table-header" >
                     <th><h2>Cant</h2></th>
                     <th><h2>Descripcion</h2></th>
-                    <th><h2>Total</h2></th>
+                    <th><h2>Subtotal</h2></th>
                 </tr>
                 <script>
                     /*var result = [
@@ -215,27 +221,19 @@
                     tablaBody.appendChild(spaceRow);
 
                 </script>
-                <tr class="table-footer top-line">
-                    <td class=""  colspan="2" id="propincell"><h4>Propina Sugerida:</h4></td>
-                    <td colspan="2"><h4 id="propina"></h4></td>
-                </tr>
-                <tr class="table-footer top-line">
-                    <td class=""  colspan="2" id="domicilioCell"><h4>DOMICILIO:</h4></td>
-                    <td colspan="2"><h4 id="domi"></h4></td>
-                </tr>
-               
-                <tr class="table-footer">
-                    <td colspan="2"><h2>EFECTIVO:</h2></td>
-                    <td colspan="2"><h2 id="efectivo"></h2></td>
-                    
-                </tr>
-                <tr class="table-footer top-line">
+              <tr class="table-footer top-line">
                     <td class=""  colspan="2"><h2>TOTAL:</h2></td>
                     <td colspan="2"><h2 id="total"></h2></td>
                 </tr>
+                    <tr class="table-footer">
+                    <td colspan="2"><h2>A CUENTA:</h2></td>
+                    <td colspan="2"><h2 id="a_cuenta"></h2></td>
+                    
+                </tr>
+                
                 <tr class="table-footer">
-                    <td colspan="2"><h2>DEVUELTAS:</h2></td>
-                    <td colspan="2"><h2 id="devueltas"></h2></td>
+                    <td colspan="2"><h2>SALDO:</h2></td>
+                    <td colspan="2"><h2 id="saldo"></h2></td>
                 </tr>
                 
             </tbody>
@@ -250,12 +248,12 @@
             </p>
         
             <p class="m-0">
-               Facturas AutoSystem
+               Apps para Mypes
                <br/>
                Contactos:
-               +57 325 820 8619
+               +591 68098299
                <br/>
-               Siguenos en redes sociales como @AutoSystem
+               Siguenos en redes sociales como @appsparamypesbo
             </p>
     </div>
     <script>
