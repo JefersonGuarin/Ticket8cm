@@ -241,7 +241,8 @@
         var totalElement = document.getElementById("total").textContent = total;
         var a_cuentaElement = document.getElementById("a_cuenta").textContent = a_cuenta;
         var saldoElement = document.getElementById("saldo").textContent = saldo;
-        var logoElement = document.getElementById("logo");
+        var logoremplazado = logo.replace(/@/g,"&")
+        var logoElement = document.getElementById("logoremplazado");
         logoElement.src = logo;
     </script>
        <script>
