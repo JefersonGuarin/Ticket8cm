@@ -110,9 +110,9 @@
         var domi = params.has('domi') ? params.get('domi') : "N/A";
         var propina = params.has('propina') ? params.get('propina') : "N/A";
 
-        var total = params.has('total') ? params.get('total') : "";
-        var saldo = params.has('saldo') ? params.get('saldo') : "";
-        var a_cuenta = params.has('a_cuenta') ? params.get('a_cuenta') : "";
+        var totalf = params.has('total') ? params.get('total') : "";
+        var saldof = params.has('saldo') ? params.get('saldo') : "";
+        var a_cuentaf = params.has('a_cuenta') ? params.get('a_cuenta') : "";
         var subtotal_desc = params.has('subtotal_desc') ? params.get('subtotal_desc') : " ";
         var descuento = params.has('descuento') ? params.get('descuento') : " ";
         var estado = params.has('estado') ? params.get('estado') : "--";
@@ -125,9 +125,9 @@
         //Formato de 2 decimales
         propina = parseFloat(propina).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         domi = parseFloat(domi).toLocaleString('es-ES', { minimumFractionDigits: 0 });
-        total = parseFloat(total).toLocaleString('es-ES', { minimumFractionDigits: 0 });
-        a_cuenta = parseFloat(a_cuenta).toLocaleString('es-ES', { minimumFractionDigits: 0 });
-        saldo = parseFloat(saldo).toLocaleString('es-ES', { minimumFractionDigits: 0 });
+        totalf = parseFloat(total).toLocaleString('es-ES', { minimumFractionDigits: 0 });
+        a_cuentaf = parseFloat(a_cuenta).toLocaleString('es-ES', { minimumFractionDigits: 0 });
+        saldof = parseFloat(saldo).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         descuento = parseFloat(descuento).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         subtotal_desc = parseFloat(subtotal_desc).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         
@@ -286,9 +286,9 @@
              // Si domi no es "N/A", muestra el valor en el elemento <h2>
              domiElement.textContent = domi;
             }       
-        var totalElement = document.getElementById("total").textContent = total;
-        var a_cuentaElement = document.getElementById("a_cuenta").textContent = a_cuenta;
-        var saldoElement = document.getElementById("saldo").textContent = saldo;
+        var totalElement = document.getElementById("total").textContent = totalf;
+        var a_cuentaElement = document.getElementById("a_cuenta").textContent = a_cuentaf;
+        var saldoElement = document.getElementById("saldo").textContent = saldof;
         var subtotal_descElement = document.getElementById("efectivo").textContent = descuento;
         var descuentoElement = document.getElementById("devueltas").textContent = subtotal_desc;
         var estadoElement = document.getElementById("estado").textContent = estado;
