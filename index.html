@@ -101,7 +101,7 @@
         
         var nro_boleta = params.has('boleta') ? params.get('boleta') : "---";
         var logo = params.has('logo') ? params.get('logo') : "---";
-       // var nro_mesa = params.has('mesa') ? params.get('mesa') : "---";
+        //var nro_mesa = params.has('mesa') ? params.get('mesa') : "---";
         var direc = params.has('direccion') ? params.get('direccion') : "---";
         
 
@@ -169,11 +169,11 @@
             <h3 class="direccion" id="nro_direccion_id" ></h3>
         </div>
         <div class="label">
-            <p class="fecha_recepcion">
-                FECHA:
-                <br>
-                <b id="fechaR"></b>
-            </p>
+           // <p class="fecha_recepcion">
+           //   FECHA:
+           // <br>
+           //<b id="fechaR"></b>
+           // </p>
 
         </div>
 
@@ -262,7 +262,7 @@
         var nroDireccion = document.getElementById("nro_direccion_id").textContent = direc;
 
 
-        var fechaElement = document.getElementById("fechaR").textContent = fecha;
+        //var fechaElement = document.getElementById("fechaR").textContent = fecha;
         var fecha_entregaElement = document.getElementById("hora").textContent = fecha_entrega;
 
         const propinaCell = document.getElementById("propinaCell");
