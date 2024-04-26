@@ -137,7 +137,7 @@
     </script>
     <div id="thermal-pos">
         <div class="label">
-          <img src="${logo}" alt="Logo de la empresa">
+          <img src="logo" alt="Logo de la empresa">
             <br/>
             <br/>
             <p class="info-tienda">
@@ -241,7 +241,8 @@
         var totalElement = document.getElementById("total").textContent = total;
         var a_cuentaElement = document.getElementById("a_cuenta").textContent = a_cuenta;
         var saldoElement = document.getElementById("saldo").textContent = saldo;
-        var logoElement = document.getElementById("logo").textContent = logo;
+        var logoElement = document.getElementById("logo");
+        logoElement.src = logo;
     </script>
        <script>
          console.log("Valor de total:", total);
