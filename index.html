@@ -101,36 +101,24 @@
         
         var nro_boleta = params.has('boleta') ? params.get('boleta') : "---";
         var logo = params.has('logo') ? params.get('logo') : "---";
-        //var nro_mesa = params.has('mesa') ? params.get('mesa') : "---";
         var direc = params.has('direccion') ? params.get('direccion') : "---";
         
 
         var fecha = params.has('fecha') ? params.get('fecha') : "dd/mm/aaaa hh:mm:ss";
-        //var fecha_entrega = params.has('fecha_entrega') ? params.get('fecha_entrega') : "hh:mm:ss";
-        //var domi = params.has('domi') ? params.get('domi') : "N/A";
-        //var propina = params.has('propina') ? params.get('propina') : "N/A";
-
         var total = params.has('total') ? params.get('total') : "";
         var saldo = params.has('saldo') ? params.get('saldo') : "";
         var a_cuenta = params.has('a_cuentaf') ? params.get('a_cuenta') : "";
-        //var subtotal_desc = params.has('subtotal_desc') ? params.get('subtotal_desc') : " ";
-        //var descuento = params.has('descuento') ? params.get('descuento') : " ";
-        //var estado = params.has('estado') ? params.get('estado') : "--";
-
+        
         //Recibe los datos de los servicios (separados por comas)
         var cantidades = params.has('cantidades') ? params.get('cantidades') : "0.00";
         var descripciones = params.has('servicios') ? params.get('servicios') : "No hay articulos";
         var p_units = params.has('p_unit') ? params.get('p_unit') : "0.00";
         
         //Formato de 2 decimales
-        //propina = parseFloat(propina).toLocaleString('es-ES', { minimumFractionDigits: 0 });
-        //domi = parseFloat(domi).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         total = parseFloat(total).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         a_cuenta = parseFloat(a_cuenta).toLocaleString('es-ES', { minimumFractionDigits: 0 });
         saldo = parseFloat(saldo).toLocaleString('es-ES', { minimumFractionDigits: 0 });
-        //descuento = parseFloat(descuento).toLocaleString('es-ES', { minimumFractionDigits: 0 });
-        //subtotal_desc = parseFloat(subtotal_desc).toLocaleString('es-ES', { minimumFractionDigits: 0 });
-        
+               
         //crea una lista de cada columna a partir de las comas.
         cantidades = cantidades.split(", ");
         descripciones = descripciones.split(", "); 
@@ -165,18 +153,8 @@
         <div class="label">
             <b>NOTA DE VENTA:</b>
             <h1 class="nro_boleta" id="nro_boleta_id" ></h1>
-            //<h1 class="nro_mesa" id="nro_mesa_id" ></h1>
-            <h3 class="direccion" id="nro_direccion_id" ></h3>
+             <h3 class="direccion" id="nro_direccion_id" ></h3>
         </div>
-        <div class="label">
-           // <p class="fecha_recepcion">
-           //   FECHA:
-           // <br>
-           //<b id="fechaR"></b>
-           // </p>
-
-        </div>
-
         <!-- <div class="line">*****************</div> -->
         
         <div class="label">
@@ -258,34 +236,8 @@
     </div>
     <script>
         var nroBoletaElement = document.getElementById("nro_boleta_id").textContent = nro_boleta;
-        //var nroMesaElement = document.getElementById("nro_mesa_id").textContent = nro_mesa;
         var nroDireccion = document.getElementById("nro_direccion_id").textContent = direc;
-
-
-        //var fechaElement = document.getElementById("fechaR").textContent = fecha;
         var fecha_entregaElement = document.getElementById("hora").textContent = fecha_entrega;
-
-        const propinaCell = document.getElementById("propinaCell");
-        var propinaElement = document.getElementById("propina");
-                    // Verifica si domi es igual a "N/A"
-            if (propina == "NaN") {
-                    // Si domi es "N/A", oculta el elemento <td> que contiene la etiqueta y el valor
-                propinaCell.style.display = "none";
-            } else {
-             // Si domi no es "N/A", muestra el valor en el elemento <h2>
-             propinaElement.textContent = propina;
-            }  
-
-        const domicilioCell = document.getElementById("domicilioCell");
-        var domiElement = document.getElementById("domi");
-                    // Verifica si domi es igual a "N/A"
-            if (domi == "NaN") {
-                    // Si domi es "N/A", oculta el elemento <td> que contiene la etiqueta y el valor
-                domicilioCell.style.display = "none";
-            } else {
-             // Si domi no es "N/A", muestra el valor en el elemento <h2>
-             domiElement.textContent = domi;
-            }       
         var totalElement = document.getElementById("total").textContent = total;
         var a_cuentaElement = document.getElementById("a_cuenta").textContent = a_cuenta;
         var saldoElement = document.getElementById("saldo").textContent = saldo;
