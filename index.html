@@ -242,16 +242,18 @@
         var a_cuentaElement = document.getElementById("a_cuenta").textContent = a_cuenta;
         var saldoElement = document.getElementById("saldo").textContent = saldo;
         var logoremplazado = logo.replace(/@/g,"&");
+      console.log("Valor de logo remplazado:", logoremplazado);
         logoremplazado = logoremplazado(/ /g,"%20");
+      console.log("Valor de logo remplazado:", logoremplazado);
         var logoElement = document.getElementById("logoremplazado");
         logoElement.src = logoremplazado;
     </script>
        <script>
          console.log("Valor de total:", total);
-console.log("Valor de a_cuenta:", a_cuenta);
-console.log("Valor de saldo:", saldo);
+          console.log("Valor de a_cuenta:", a_cuenta);
+          console.log("Valor de saldo:", saldo);
          console.log("Valor de logo:", logo);
-         console.log("Valor de logo:", logoremplazado);
+         console.log("Valor de logo remplazado:", logoremplazado);
       </script>
 </body>
 </html>
