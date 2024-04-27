@@ -243,7 +243,7 @@
         var saldoElement = document.getElementById("saldo").textContent = saldo;
         var logoremplazado = logo.replace(/@/g,"&");
       console.log("Valor de logo remplazado:", logoremplazado);
-        logoremplazado = logoremplazado(/ /g,"%20");
+        logoremplazado = lencodeURIComponent(logoReemplazado);
       console.log("Valor de logo remplazado:", logoremplazado);
         var logoElement = document.getElementById("logoremplazado");
         logoElement.src = logoremplazado;
