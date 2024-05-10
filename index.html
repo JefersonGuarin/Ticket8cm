@@ -98,7 +98,8 @@
 
         // Obtener los valores de los parámetros
         var nombre_empresa = params.has('nombre_empresa') ? params.get('nombre_empresa') : "---";
-        
+        var whatsapp = params.has('whatsapp') ? params.get('whatsapp') : "---";
+        var tipo = params.has('tipo') ? params.get('tipo') : "---";
         var nro_boleta = params.has('boleta') ? params.get('boleta') : "---";
         var logo = params.has('logo') ? params.get('logo') : "---";
         var direc = params.has('direccion') ? params.get('direccion') : "---";
@@ -144,10 +145,12 @@
                 Telf: +591 68098299
                 <br>
                 APPS PARA MYPES
-                <br>
-                Horario de atencion: De Martes a Domingo 5pm a 11pm
-                <br>
+               <br>
             </p>
+        </div>
+      <div class="label">
+            <b>TIPO:</b>
+            <h1 class="nro_boleta" id="tipo" ></h1>
         </div>
         
         <div class="label">
