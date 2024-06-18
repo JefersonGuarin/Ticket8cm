@@ -103,6 +103,7 @@
         var nro_boleta = params.has('boleta') ? params.get('boleta') : "---";
         var logo = params.has('logo') ? params.get('logo') : "---";
         var direc = params.has('direccion') ? params.get('direccion') : "---";
+        var observ = params.has('observacion') ? params.get('observacion') : "---";
         
 
         var fecha = params.has('fecha') ? params.get('fecha') : "dd/mm/aaaa hh:mm:ss";
@@ -216,7 +217,7 @@
                     <td colspan="2"><h2>SALDO:</h2></td>
                     <td colspan="2"><h2 id="saldo"></h2></td>
                 </tr>
-                
+                <h3 class="observacion" id="observacion_id" ></h3>
             </tbody>
         </table>
         <br/>
@@ -242,6 +243,7 @@
       var whatsappElement = document.getElementById("whatsapp").textContent = whatsapp;
         var nroBoletaElement = document.getElementById("nro_boleta_id").textContent = nro_boleta;
         var nroDireccion = document.getElementById("nro_direccion_id").textContent = direc;
+      var observacion = document.getElementById("observacion_id").textContent = observ;
         var fecha_entregaElement = document.getElementById("fecha").textContent = fecha;
         var totalElement = document.getElementById("total").textContent = total;
         var a_cuentaElement = document.getElementById("a_cuenta").textContent = a_cuenta;
