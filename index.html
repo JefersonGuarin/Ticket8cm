@@ -104,7 +104,7 @@
         var logo = params.has('logo') ? params.get('logo') : "---";
         var direc = params.has('direccion') ? params.get('direccion') : "---";
         var observ = params.has('observacion') ? params.get('observacion') : "---";
-        
+        var cliente = params.has('cliente') ? params.get('cliente') : "---";
 
         var fecha = params.has('fecha') ? params.get('fecha') : "dd/mm/aaaa hh:mm:ss";
         var total = params.has('total') ? params.get('total') : "";
@@ -155,6 +155,8 @@
             <b>NOTA DE VENTA:</b>
             <h1 class="nro_boleta" id="nro_boleta_id" ></h1>
              <h3 class="direccion" id="nro_direccion_id" ></h3>
+              <h3 >CLIENTE: </h3>
+              <h3 class="direccion" id="nro_direccion_id" ></h3>
         </div>
         <!-- <div class="line">*****************</div> -->
         
@@ -242,6 +244,7 @@
         var nroBoletaElement = document.getElementById("nro_boleta_id").textContent = nro_boleta;
         var nroDireccion = document.getElementById("nro_direccion_id").textContent = direc;
       var observacion = document.getElementById("observacion_id").textContent = observ;
+      var cliente = document.getElementById("cliente_id").textContent = cliente;
         var fecha_entregaElement = document.getElementById("fecha").textContent = fecha;
         var totalElement = document.getElementById("total").textContent = total;
         var a_cuentaElement = document.getElementById("a_cuenta").textContent = a_cuenta;
